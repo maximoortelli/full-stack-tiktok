@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import { BiSearch, BiUser } from "react-icons/bi";
