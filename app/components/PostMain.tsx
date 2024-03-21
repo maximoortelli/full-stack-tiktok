@@ -27,7 +27,7 @@ function PostMain({ post }: PostMainCompTypes) {
   }, []);
   return (
     <>
-      <div id={`PostMain-${post.id}`} className="flex border-b py-6">
+      <div id={`PostMain-${post.id}`} className="flex border-b ml-[-20px] py-6">
         <div className="cursor-pointer">
           <img
             className="rounded-full max-h-[60px]"
@@ -36,7 +36,7 @@ function PostMain({ post }: PostMainCompTypes) {
           />
         </div>
 
-        <div className="pl-3 w-full px-4">
+        <div className="pl-0 lg:pl-3 w-full px-4">
           <div className="flex items-center justify-between pb-0.5">
             <Link href={`/profile/${post.profile.user_id}`}>
               <span className="font-bold hover:underline cursor-pointer">
@@ -46,7 +46,7 @@ function PostMain({ post }: PostMainCompTypes) {
 
             <button
               className="
-               border text-[15px] px-[21px] py-0.5 
+               border text-[15px] px-[21px] mr-8 py-0.5 
                border-[#F02C56] text-[#F02C56] 
                hover:bg-[#ffeef2] font-semibold rounded-md"
             >
@@ -69,21 +69,20 @@ function PostMain({ post }: PostMainCompTypes) {
           <div className="mt-2.5 flex">
             <div
               className="
-             relative min-h-[480px] max-h-[580px] 
-             max-w-[260px] flex items-center 
+             relative min-h-[480px] max-h-[580px]
+             w-[300px] flex items-center 
              bg-black rounded-xl cursor-pointer"
             >
               <video
                 id={`video-${post.id}`}
                 loop
                 controls
-                muted
                 className="rounded-xl object-cover mx-auto h-full"
                 src={post?.video_url}
               />
 
               <img
-                className="absolute right-2 bottom-10"
+                className="absolute right-2 bottom-4"
                 width={90}
                 src="/images/tiktok-logo-white.png"
               />
