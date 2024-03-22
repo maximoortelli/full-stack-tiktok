@@ -6,6 +6,7 @@ import MainLayout from "@/app/layouts/MainLayout";
 import ClientOnly from "@/app/components/ClientOnly";
 import { BsPencil } from "react-icons/bs";
 import PostUser from "@/app/components/profile/PostUser";
+import EditProfileOverlay from "@/app/components/profile/EditProfileOverlay";
 
 export default function Profile({ params }: ProfilePageTypes) {
   const currentProfile = {
@@ -18,6 +19,9 @@ export default function Profile({ params }: ProfilePageTypes) {
   return (
     <>
       <MainLayout>
+        <ClientOnly>
+            <EditProfileOverlay />
+        </ClientOnly>
         <div
           className="
                     pt-[90px]
