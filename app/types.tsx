@@ -11,6 +11,14 @@ export interface Like {
   post_id: string;
 }
 
+export interface Post {
+  id: string;
+  user_id: string;
+  video_url: string;
+  text: string;
+  created_at: string;
+}
+
 export interface Comment {
   id: string;
   user_id: string;
@@ -41,13 +49,18 @@ export interface PostMainLikesCompTypes {
   post: PostWithProfile;
 }
 
-/*------------------------------------*/
+export interface PostUserCompTypes {
+  post: Post;
+}
+
+export interface ProfilePageTypes {
+  params: { id: string };
+}
 
 export interface PostMainCompTypes {
   post: PostWithProfile;
 }
 
-//LAYOUT INCLUDE TYPES
 export interface MenuItemsTypes {
   iconString: string;
   colorString: string;
